@@ -70,12 +70,12 @@
         }
 
         .form-card {
-            background: rgba(93, 142, 163, 0.9); 
+            background: rgba(191, 192, 194, 0.9); 
             border-radius: 40px;
             padding: 3rem;
             max-width: 900px;
             width: 100%;
-            color: white;
+            color: rgb(0, 0, 0);
             box-shadow: 0 15px 45px rgba(0,0,0,0.2);
         }
 
@@ -171,47 +171,25 @@
                     <label class="btn btn-action mb-4" for="profilePhoto">Choose File</label>
                     <input type="file" id="profilePhoto" accept="image/*" class="d-none">
                     
-                    <button type="submit" form="regForm" class="btn btn-action mt-4">Submit</button>
+                    <button type="submit" form="regForm" class="btn btn-action mt-4">Change Password</button>
                 </div>
 
                 <div class="col-md-7 ps-md-5">
-                    <h2 class="registration-title mb-4">REGISTRATION</h2>
+                    <h2 class="registration-title mb-4">Student Information</h2>
                     <form id="regForm" onsubmit="handleSubmit(event)">
                         <div class="mb-2">
-                            <label class="form-label mb-1">First Name</label>
-                            <input type="text" class="form-control" required>
+                            <h5>Student ID</h5>
+                                <p> AMS123456  </p>
                         </div>
-                        <div class="mb-2">
-                            <label class="form-label mb-1">Last Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-4">
-                                <label class="form-label mb-1">Age</label>
-                                <input type="number" class="form-control" required>
-                            </div>
-                            <div class="col-8">
-                                <label class="form-label mb-1">Contact Number</label>
-                                <input type="tel" class="form-control" id="contactNumber" placeholder="09xxxxxxxxx" required>
-                            </div>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label mb-1">Email</label>
-                            <input type="email" class="form-control" placeholder="example@gmail.com" required>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label mb-1">Enter your username</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label mb-1">Enter your password</label>
-                            <input type="password" class="form-control" required>
+                        <h5>Contact Number</h5>
+                        <p> +63103847893 </p>
+                        <h5>Email Address</h5>
+                        <p>santos.aj@obmontessori.edu.ph</p>
+                        <h5>Gender</h5>
+                        <p>Female</p>
+                        
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script> 
     document.getElementById('contactNumber').addEventListener('input', function(e) {
