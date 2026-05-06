@@ -42,10 +42,105 @@
         }
 
         .main {
-            margin-left: 160px; /* Same as the width of the sidebar */
+            margin-left: 160px;
             padding: 0px 10px;
         
         }
+        :root {
+            --brand-blue: #3d7294;
+            --brand-teal: #5d8ea3; 
+            --brand-green: #89b08d;
+        }
+
+        .btn-primary {
+            background-color: rgb(64, 106, 161) !important;
+            border: none;
+        }
+
+        .navbar {
+            background-color: rgba(245, 245, 245, 0.9) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .registration-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .form-card {
+            background: rgba(93, 142, 163, 0.9); 
+            border-radius: 40px;
+            padding: 3rem;
+            max-width: 900px;
+            width: 100%;
+            color: white;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+        }
+
+        .divider-line {
+            border-right: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .avatar-circle {
+            width: 160px;
+            height: 160px;
+            background-color: #d9d9d9;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-control {
+            background-color: #f8f9fa !important;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .btn-action {
+            background-color: var(--brand-green) !important;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 30px;
+            font-weight: 600;
+            width: 100%;
+            max-width: 200px;
+            transition: 0.3s;
+        }
+
+        .btn-action:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
+
+        .registration-title {
+            font-weight: 800;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .divider-line {
+                border-right: none;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .registration-container {
+    margin-left: 250px;
+}
 
     </style>
 
@@ -62,8 +157,87 @@
     </div>
 
     <div class="main">
+
         
     </div>
-    
+
+        <div class="registration-container">
+        <div class="form-card">
+            <div class="row">
+                <div class="col-md-5 text-center divider-line d-flex flex-column justify-content-center align-items-center">
+                    <div class="avatar-circle">
+                        <img id="preview" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+                    </div>
+                    <label class="btn btn-action mb-4" for="profilePhoto">Choose File</label>
+                    <input type="file" id="profilePhoto" accept="image/*" class="d-none">
+                    
+                    <button type="submit" form="regForm" class="btn btn-action mt-4">Submit</button>
+                </div>
+
+                <div class="col-md-7 ps-md-5">
+                    <h2 class="registration-title mb-4">REGISTRATION</h2>
+                    <form id="regForm" onsubmit="handleSubmit(event)">
+                        <div class="mb-2">
+                            <label class="form-label mb-1">First Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label mb-1">Last Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4">
+                                <label class="form-label mb-1">Age</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="col-8">
+                                <label class="form-label mb-1">Contact Number</label>
+                                <input type="tel" class="form-control" id="contactNumber" placeholder="09xxxxxxxxx" required>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label mb-1">Email</label>
+                            <input type="email" class="form-control" placeholder="example@gmail.com" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label mb-1">Enter your username</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label mb-1">Enter your password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script> 
+    document.getElementById('contactNumber').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9]/g, '');   
+  });
+
+    document.getElementById('profilePhoto').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    document.getElementById('preview').src = ev.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert("Registration data received!");
+        }
+
+        function handleSubmit(e) {
+    e.preventDefault();
+    window.location.href = "confirmation.html"; 
+}
+    </script>
 </body>
 </html>
