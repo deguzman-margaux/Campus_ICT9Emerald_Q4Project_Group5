@@ -10,18 +10,42 @@
 
  <style>
 
-
-       :root {
-            --footer-bg-color: #f8f9fa;
-            --footer-text-color: #6c757d;
-            --footer-link-hover-color: #343a40;
+ body{
+            background-color: #adadad;
+            color: #333;
+            margin-top: 80px;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 230px; /* Set the width of the sidebar */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
+        .sidenav a {
+            padding: 15px 8px 6px 35px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
 
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
 
-
+        .main {
+            margin-left: 230px; /* Same as the width of the sidebar */
+            padding: 0px 10px;
         
-
+        }
 
  body {background-image: url("img4.webp");}
  img {
@@ -32,7 +56,7 @@
 }
 
 h3 {color: #ffffff;}
-p {color: white;}
+p {color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; align-content: center;}
 
 .book {
 width: 30px;
@@ -66,28 +90,6 @@ width: 30px;
   }
 
 
-.sidenav {
-      height: 100%;
-      width: 230px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 50px;
-      font-family: 'Gill Sans', Calibri, sans-serif;
-    }
-    .sidenav a {
-      padding: 15px 8px 6px 35px;
-      text-decoration: none;
-      font-size: 20px;
-      color: #818181;
-      display: block;
-    }
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
 
 
 
@@ -95,7 +97,7 @@ width: 30px;
 
 <body>
 <div class="sidenav">
-    <img src="obmc.webp" alt="logo" height="150" width="150" class="rounded d-block mx-auto mb-3">
+    <img src="obmc.webp" alt="logo" height="150px" width="200px" class="rounded d-block mx-auto mb-3">
     <a href="dashboard.html">Dashboard</a>
     <a href="notebooks.html">Virtual Notebooks</a>
     <a href="tasks.html">Tasks</a>
@@ -119,7 +121,7 @@ width: 30px;
 
 <main class="grid" style="margin-left: 275px; margin-top: 50px; margin-right: 50px; margin-bottom: 30px;">
   <article>
-    <img src="eng.png" style="border-radius: 10px;"           alt="English">
+    <img src="eng.png"  style="border-radius: 10px; width: 200px; height: 125px;"            alt="English">
     <div class="text">
       <h3 style="text-align: center;">English</h3>
       <p>
@@ -129,7 +131,7 @@ width: 30px;
     </div>
   </article>
     <article>
-    <img src="math.png" style="border-radius: 10px;"           alt="Mathematics">
+    <img src="math.png"  style="border-radius: 10px; width: 200px; height: 125px;"             alt="Mathematics">
     <div class="text">
       <h3 style="text-align: center;">Mathematics</h3>
       <p>
@@ -142,7 +144,7 @@ ROSE ANN JOYCE CASTRO</p>
     </div>
   </article>
     <article>
-    <img src="ss.jpg" style="border-radius: 10px;"           alt="SS">
+    <img src="ss.jpg" style="border-radius: 10px; width: 200px; height: 125px;"           alt="SS" >
     <div class="text">
       <h3 style="text-align: center;">Social Studies</h3>
       <p>
@@ -155,7 +157,7 @@ LARA ALIYAH MENDOZA</p>
     </div>
   </article>
     <article>
-    <img src="muisic.jpg" style="border-radius: 10px;"           alt="Music">
+    <img src="muisic.jpg"  style="border-radius: 10px; width: 200px; height: 125px;"          alt="Music">
     <div class="text">
       <h3 style="text-align: center;">Music</h3>
       <p>
@@ -168,7 +170,7 @@ ERWIN JOHN REYES</p>
     </div>
   </article>
     <article>
-    <img src="science.png" style="border-radius: 10px;"           alt="Science">
+    <img src="science.png"  style="border-radius: 10px; width: 200px; height: 125px;"             alt="Science">
     <div class="text">
       <h3 style="text-align: center;">Science</h3>
       <p>
@@ -181,7 +183,7 @@ JUSTINE ERICZ AQUILINO</p>
     </div>
   </article>
       <article>
-    <img src="fil.png" style="border-radius: 10px;"           alt="Filipino">
+    <img src="fil.png"  style="border-radius: 10px; width: 200px; height: 125px;"           alt="Filipino">
     <div class="text">
       <h3 style="text-align: center;">Filipino</h3>
       <p>
