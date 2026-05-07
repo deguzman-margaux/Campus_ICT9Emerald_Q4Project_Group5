@@ -10,15 +10,22 @@
 
     <style>
 
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
         body{
-            background-color: #adadad;
-            color: #333;
-            margin-top: 80px;
+            background:#f5f5f5;
+            color:#333;
+            margin-top:80px;
         }
         
         .sidenav {
             height: 100%;
-            width: 230px; /* Set the width of the sidebar */
+            width: 230px;
             position: fixed;
             z-index: 1;
             top: 0;
@@ -42,9 +49,96 @@
         }
 
         .main {
-            margin-left: 160px; /* Same as the width of the sidebar */
-            padding: 0px 10px;
-        
+            margin-left: 260px;
+            padding: 25px;
+        }
+
+        .container{
+            max-width:1000px;
+        }
+
+        .tasks-header{
+            display:inline-block;
+            background:#1f2430;
+            color:white;
+            padding:14px 22px;
+            border-radius:16px;
+            font-size:20px;
+            font-weight:bold;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            color:#555;
+            margin-bottom:25px;
+            font-size:18px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:22px;
+        }
+
+        .card{
+            background:white;
+            border-radius:14px;
+            padding:20px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.15);
+            min-height:215px;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+        }
+
+        .card h2{
+            font-size:22px;
+            margin-bottom:25px;
+            color:#222;
+        }
+
+        .activity{
+            font-weight:bold;
+            color:#555;
+            margin-bottom:5px;
+            font-size:18px;
+        }
+
+        .deadline{
+            color:#7a7a7a;
+            font-size:16px;
+            margin-bottom:30px;
+        }
+
+        .btn-task{
+            width:100%;
+            border:none;
+            background:#1ec0e6;
+            color:#111;
+            padding:14px;
+            border-radius:5px;
+            font-size:20px;
+            cursor:pointer;
+        }
+
+        .btn-task:hover{
+            opacity:0.9;
+        }
+
+        @media(max-width:768px){
+            .cards{
+                grid-template-columns:1fr;
+            }
+
+            .main{
+                margin-left:0;
+            }
+
+            .sidenav{
+                position:relative;
+                width:100%;
+                height:auto;
+            }
         }
 
     </style>
@@ -53,7 +147,7 @@
 <body>
 
     <div class="sidenav">
-        <img src="obmc.webp" alt="logo" height="150px" width="150px" class="rounded d-block mx-auto mb-3">
+        <img src="https://media.discordapp.net/attachments/1315251160395026432/1501912082466209893/obmc.webp?ex=69fdcc20&is=69fc7aa0&hm=b41045c9e73b545ae96dd3c66c20cd1cc73a4634b963736b02f1ae5ebaebd4e4&=&format=webp&width=823&height=823" alt="logo" height="150px" width="150px" class="rounded d-block mx-auto mb-3">
         <a href="dashboard.html">Dashboard</a>
         <a href="notebooks.html">Virtual Notebooks</a>
         <a href="tasks.html">Tasks</a>
@@ -62,6 +156,74 @@
     </div>
 
     <div class="main">
+
+        <div class="container">
+
+            <div class="tasks-header">TASKS</div>
+
+            <div class="subtitle">Choose a task.</div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div>
+                        <h2>Mathematics</h2>
+
+                        <div class="activity">Drill Sheet 2</div>
+
+                        <div class="deadline">
+                            Deadline: April 9, 2026 | 10:00 A.M.
+                        </div>
+                    </div>
+
+                    <button class="btn-task">Take this activity</button>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h2>Science</h2>
+
+                        <div class="activity">Lab Activity 3</div>
+
+                        <div class="deadline">
+                            Deadline: April 10, 2026 | 11:00 A.M.
+                        </div>
+                    </div>
+
+                    <button class="btn-task">Take this activity</button>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h2>ICT</h2>
+
+                        <div class="activity">Quarter Project</div>
+
+                        <div class="deadline">
+                            Deadline: May 8, 2026 | 2:30 P.M.
+                        </div>
+                    </div>
+
+                    <button class="btn-task">Submit</button>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h2>VE</h2>
+
+                        <div class="activity">Film Critique</div>
+
+                        <div class="deadline">
+                            Deadline: April 22, 2026 | 8:00 A.M.
+                        </div>
+                    </div>
+
+                    <button class="btn-task">Play Video Clip</button>
+                </div>
+
+            </div>
+
+        </div>
         
     </div>
     
