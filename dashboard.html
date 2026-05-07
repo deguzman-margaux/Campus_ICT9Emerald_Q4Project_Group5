@@ -9,68 +9,64 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body{
-            background-color: #adadad;
-            color: #333;
-            margin-top: 80px;
-        }
+    body {
+      background: url("https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/e3d51918-7570-43df-bd7f-9774108edc6d/DSC06678.jpg") 
+                  no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin-top: 80px;
+    }
         
-        .sidenav {
-            height: 100%;
-            width: 230px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 50px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
+    .sidenav {
+      height: 100%;
+      width: 230px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgba(17, 17, 17, 0.9); /* semi-transparent so background shows */
+      overflow-x: hidden;
+      padding-top: 50px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 
-        .sidenav a {
-            padding: 15px 8px 6px 35px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-        }
+    .sidenav a {
+      padding: 15px 8px 6px 35px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
 
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
 
-        .main {
-            margin-left: 230px;
-            padding: 0px 10px;
-        
-        }
+.main {
+  margin-left: 230px;
+  padding: 30px; 
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  min-height: 90vh;
+  width: calc(100% - 260px);
+}
+
   </style>
-  
 </head>
 <body>
-
-<div class="image-section">
-  <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/e3d51918-7570-43df-bd7f-9774108edc6d/DSC06678.jpg" 
-       alt="School dashboard photo" 
-       style="width:100%; height:auto; border-radius:8px;">
-</div>
-  
-
   <div class="sidenav">
-        <img src="obmc.webp" alt="logo" height="150px" width="150px" class="rounded d-block mx-auto mb-3">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="notebooks.html">Virtual Notebooks</a>
-        <a href="tasks.html">Tasks</a>
-        <a href="profile.html">Profile</a>
-        <a href="index.html" onclick="return confirm('Are you sure you want to log out?');">Log out</a>
+    <img src="obmc.webp" alt="logo" height="150px" width="150px" class="rounded d-block mx-auto mb-3">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="notebooks.html">Virtual Notebooks</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="profile.html">Profile</a>
+    <a href="index.html" onclick="return confirm('Are you sure you want to log out?');">Log out</a>
   </div>
   
   <div class="main">
     <div class="container">
       <h1 class="mb-4">School Dashboard</h1>
 
-      
       <ul class="nav nav-tabs mb-3" id="activityTabs" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="ongoing-tab" data-bs-toggle="tab" data-bs-target="#ongoing" type="button" role="tab">Ongoing</button>
@@ -86,7 +82,6 @@
         </li>
       </ul>
 
-      
       <div class="d-flex justify-content-between mb-3">
         <div>
           <select class="form-select d-inline w-auto">
@@ -104,7 +99,6 @@
         </div>
       </div>
 
-      
       <div class="tab-content">
         <div class="tab-pane fade show active" id="ongoing" role="tabpanel">
           <table class="table table-striped table-bordered">
@@ -137,6 +131,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
